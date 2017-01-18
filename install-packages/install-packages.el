@@ -1,6 +1,7 @@
 ;;; install-packages.el --- Emacs Package Installation
 
 ;; Author: Kyle W. Purdon (kpurdon)
+;; Updated by: Donnie Adams (thedadams)
 ;;
 ;; This file is not part of GNU Emacs.
 

@@ -1,9 +1,10 @@
 ;;; init.el --- Custom Emacs Configuration
 
 ;; Author: Kyle W. Purdon (kpurdon)
-;; Version: 6.0.0
+;; Updated by: Donnie Adams (thedadams)
+;; Version: 6.0.1
 ;; Keywords: configuration emacs
-;; URL: https://github.com/kpurdon/.emacs.d/init.el
+;; URL: https://github.com/thedadams/.emacs.d/init.el
 ;;
 ;; This file is not part of GNU Emacs.
 
@@ -30,7 +31,6 @@
       linum-format "%4d \u2502 "
       backup-directory-alist `((".*" . ,temporary-file-directory))
       auto-save-file-name-transforms `((".*" ,temporary-file-directory t))
-      inhibit-startup-message t
       sml/no-confirm-load-theme t
       yas-global-mode 1
       custom-file "~/.emacs.d/custom.el"

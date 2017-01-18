@@ -1,4 +1,4 @@
-# kpurdon/.emacs.d
+# thedadams/.emacs.d
 
 My personal emacs configuration. This configuration is built to work with [Emacs for MacOSX](http://emacsformacosx.com/) and is last tested on:
 
@@ -12,8 +12,8 @@ Custom configuration is included for the following development modes:
 * Golang
     * Automated struct tags (via [emacs-go-add-tags](https://github.com/syohex/emacs-go-add-tags))
     * ElDoc support (via [emacs-go-eldoc](https://github.com/syohex/emacs-go-eldoc))
-    * Optional golint integration
-    * Optional guru (formerly oracle) integration
+    * golint integration
+    * guru (formerly oracle) integration
 * Python
     * Optional autopep8 support
 * Markdown
@@ -24,6 +24,8 @@ Custom configuration is included for the following development modes:
     * html w/ modified default settings (via [web-mode](http://web-mode.org/)
 * JavaScript
     * via [js2-mode](https://github.com/mooz/js2-mode)
+* Latex
+    * via [auctex-latexmk](https://github.com/tom-tan/auctex-latexmk/)
 
 ### Quickstart
 
@@ -36,11 +38,11 @@ Custom configuration is included for the following development modes:
 * `go get -u golang.org/x/tools/cmd/goimports`
 * `go get -u github.com/nsf/gocode`
 * `go get -u github.com/rogpeppe/godef`
-* (optional) `go get -u github.com/golang/lint/golint` (requires go 1.5+)
-* (optional) `go get -u golang.org/x/tools/cmd/guru`
+* `go get -u github.com/golang/lint/golint` (requires go 1.5+)
+* `go get -u golang.org/x/tools/cmd/guru`
 
 #### Python (see development/_python.el)
 
 * `pip install jedi`
-* (optional) `pip install importmagic`
-* (optional) `pip install autopep8`
+* `pip install importmagic`
+* `pip install autopep8`
