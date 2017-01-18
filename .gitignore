@@ -4,4 +4,5 @@ ido.last
 request/
 places
 ac-comphist.dat
+.mc-lists.el
 custom.el
