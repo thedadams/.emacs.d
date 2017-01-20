@@ -35,10 +35,10 @@
       yas-global-mode 1
       custom-file "~/.emacs.d/custom.el"
       magit-auto-revert-mode 0
-      magit-display-buffer-function 'magit-display-buffer-fullframe-status-v1)
+      magit-display-buffer-function 'magit-display-buffer-fullframe-status-v1
+      default-major-mode 'text-mode)
 
 (osx-clipboard-mode +1)
-
 (global-linum-mode t)
 
 (load-theme 'flatland-black t)
@@ -59,6 +59,22 @@
 (sml/setup)
 (add-to-list 'sml/replacer-regexp-list
              '("^~/go" ":go:") t)
+
+(defun kill-dired-buffers ()
+  "Kill all dired buffers."
+  (interactive)
+  (mapc (lambda (buffer)
+          (when (eq 'dired-mode (buffer-local-value 'major-mode buffer))
+            (kill-buffer buffer)))
+        (buffer-list)))
+
+(defun kill-magit-buffers ()
+  "Kill all magit buffers."
+  (interactive)
+  (mapc (lambda (buffer)
+          (when (or (eq 'magit-mode (buffer-local-value 'major-mode buffer)) (eq 'magit-status-mode (buffer-local-value 'major-mode buffer)))
+            (kill-buffer buffer)))
+        (buffer-list)))
 
 (require 'development)
 
