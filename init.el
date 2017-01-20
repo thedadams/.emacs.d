@@ -72,7 +72,7 @@
   "Kill all magit buffers."
   (interactive)
   (mapc (lambda (buffer)
-          (when (or (eq 'magit-mode (buffer-local-value 'major-mode buffer)) (eq 'magit-status-mode (buffer-local-value 'major-mode buffer)))
+          (when (string-match "^\\*magit" (buffer-name buffer))
             (kill-buffer buffer)))
         (buffer-list)))
 
