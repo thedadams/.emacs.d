@@ -1,10 +1,12 @@
-;; _web.el -- custom python configuration
+;;; _web.el -- custom python configuration
 
 ;; Author: Kyle W. Purdon (kpurdon)
 ;;
 ;; This file is not part of GNU Emacs.
 
-;; Code:
+;;; Commentary:
+
+;;; Code:
 
 (require 'web-mode)
 
@@ -21,4 +23,4 @@
 
 (provide '_web)
 
-;; _web.el ends here
+;;; _web.el ends here

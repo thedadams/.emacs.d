@@ -1,10 +1,12 @@
-;; _javascript.el -- custom python configuration
+;;; _javascript.el -- custom python configuration
 
 ;; Author: Kyle W. Purdon (kpurdon)
 ;;
 ;; This file is not part of GNU Emacs.
 
-;; Code:
+;;; Commentary:
+
+;;; Code:
 
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 
@@ -13,4 +15,4 @@
 
 (provide '_javascript)
 
-;; _javascript.el ends here
+;;; _javascript.el ends here

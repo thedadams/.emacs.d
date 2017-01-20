@@ -1,16 +1,18 @@
-;; _python.el -- custom python configuration
+;;; _python.el -- custom python configuration
 
 ;; Author: Kyle W. Purdon (kpurdon)
 ;; Updated by: Donnie Adams (thedadams)
-
 ;; This file is not part of GNU Emacs.
+
+;;; Commentary:
 
 ;;; Code:
 
 (elpy-enable)
 
-(setq python-shell-interpreter "python3")
-(setq python-shell-completion-native nil)
+(setq python-shell-interpreter "python3"
+      python-shell-completion-native nil)
+
 (add-to-list 'python-shell-completion-native-disabled-interpreters "python3")
 
 (when (require 'flycheck nil t)
@@ -31,4 +33,4 @@
 
 (provide '_python)
 
-;; _python.el ends here
+;;; _python.el ends here

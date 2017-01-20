@@ -1,13 +1,15 @@
-;; _json.el -- custom python configuration
+;;; _json.el -- custom python configuration
 
 ;; Author: Kyle W. Purdon (kpurdon)
 ;;
 ;; This file is not part of GNU Emacs.
 
-;; Code:
+;;; Commentary:
+
+;;; Code:
 
 (add-to-list 'auto-mode-alist '("\\.json$" . json-mode))
 
 (provide '_json)
 
-;; _json.el ends here
+;;; _json.el ends here

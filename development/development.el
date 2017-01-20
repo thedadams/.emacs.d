@@ -1,10 +1,12 @@
-;; development.el - Load All Development Configuration
+;;; development.el --- Load All Development Configuration
 
 ;; Author: Kyle W. Purdon (kpurdon)
 ;;
 ;; This file is not part of GNU Emacs.
 
-;; Code:
+;;; Commentary:
+
+;;; Code:
 
 (require 'rainbow-delimiters)
 
@@ -24,4 +26,4 @@
 
 (provide 'development)
 
-;; development.el ends here
+;;; development.el ends here
