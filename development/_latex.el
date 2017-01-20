@@ -18,6 +18,10 @@
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
 (setq auctex-latexmk-inherit-TeX-PDF-mode t)
 
+(add-hook 'LaTeX-mode-hook
+          (lambda ()
+            (local-set-key (kbd "C-c c") 'TeX-clean)))
+
 (provide '_latex)
 
 ;;; _latex.el ends here

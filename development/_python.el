@@ -29,8 +29,6 @@
 (setq py-autopep8-options '("--ignore=E501,W293,W391,W690"))
 (add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
 
-(define-key global-map (kbd "RET") 'newline-and-indent)
-
 (provide '_python)
 
 ;;; _python.el ends here

@@ -24,10 +24,13 @@
 (set-face-attribute 'highlight nil :background "#FF0" :foreground "#000")
 
 (require 'go-add-tags)
-(global-set-key (kbd "C-c t") 'go-add-tags)
 
 (require 'go-eldoc)
 (add-hook 'go-mode-hook 'go-eldoc-setup)
+
+(add-hook 'go-mode-hook
+          (lambda ()
+            (local-set-key (kbd "C-c t") 'go-add-tags)))
 
 (provide '_golang)
 
