@@ -12,7 +12,8 @@
 (require 'package)
 
 (defvar my-packages
-  '(auctex-latexmk
+  '(auctex
+    auctex-latexmk
     better-defaults
     elpy
     exec-path-from-shell

@@ -17,6 +17,7 @@
 (require '_python)
 (require '_golang)
 (require '_markdown)
+(require '_latex)
 (require '_javascript)
 (require '_web)
 (require '_json)
