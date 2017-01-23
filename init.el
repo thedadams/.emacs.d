@@ -40,6 +40,7 @@
 
 (osx-clipboard-mode +1)
 (global-linum-mode t)
+(menu-bar-mode 1)
 
 (load-theme 'flatland-black t)
 (windmove-default-keybindings)
