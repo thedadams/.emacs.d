@@ -11,12 +11,14 @@
 
 (require 'auctex-latexmk)
 (auctex-latexmk-setup)
-(setq TeX-PDF-mode t)
-(setq TeX-auto-save t)
+(setq TeX-PDF-mode t
+      TeX-auto-save t
+      auctex-latexmk-inherit-TeX-PDF-mode t
+      LaTeX-item-indent -2
+      LaTeX-indent-level 4)
 (add-hook 'LaTeX-mode-hook 'flyspell-mode)
 (add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
-(setq auctex-latexmk-inherit-TeX-PDF-mode t)
 
 (add-hook 'LaTeX-mode-hook
           (lambda ()
