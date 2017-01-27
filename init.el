@@ -80,6 +80,13 @@
             (kill-buffer buffer)))
         (buffer-list)))
 
+(eval-after-load "dired"
+  '(progn
+     (define-key dired-mode-map (kbd "z")
+       (lambda () (interactive)
+         (let ((fn (dired-get-file-for-visit)))
+           (start-process "default-app" nil "open" fn))))))
+
 (require 'development)
 
 (load custom-file)
