@@ -38,6 +38,9 @@
       magit-display-buffer-function 'magit-display-buffer-fullframe-status-v1
       default-major-mode 'text-mode)
 
+(add-hook 'text-mode-hook 'flyspell-mode)
+(add-hook 'prog-mode-hook 'flyspell-prog-mode)
+
 (osx-clipboard-mode +1)
 (global-linum-mode t)
 (menu-bar-mode 1)
