@@ -36,7 +36,8 @@
       custom-file "~/.emacs.d/custom.el"
       magit-auto-revert-mode 0
       magit-display-buffer-function 'magit-display-buffer-fullframe-status-v1
-      default-major-mode 'text-mode)
+      default-major-mode 'text-mode
+      delete-selection-mode t)
 
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
