@@ -15,6 +15,7 @@
       TeX-auto-save t
       auctex-latexmk-inherit-TeX-PDF-mode t
       TeX-auto-local nil
+      TeX-show-compilation nil
       LaTeX-item-indent -2
       LaTeX-indent-level 4)
 (add-hook 'LaTeX-mode-hook 'flyspell-mode)
