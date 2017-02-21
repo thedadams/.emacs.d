@@ -12,7 +12,8 @@
 (require 'package)
 
 (defvar my-packages
-  '(auctex
+  '(ample-theme
+    auctex
     auctex-latexmk
     better-defaults
     elpy
