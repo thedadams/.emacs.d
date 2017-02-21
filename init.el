@@ -36,8 +36,7 @@
       custom-file "~/.emacs.d/custom.el"
       magit-auto-revert-mode 0
       magit-display-buffer-function 'magit-display-buffer-fullframe-status-v1
-      default-major-mode 'text-mode
-      delete-selection-mode t)
+      default-major-mode 'text-mode)
 
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
@@ -46,11 +45,11 @@
 (global-linum-mode t)
 (menu-bar-mode 1)
 
-(load-theme 'flatland-black t)
+(load-theme 'ample t)
 (windmove-default-keybindings)
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-(set-frame-font "Go Mono-12")
+(set-frame-font "Go Mono-11")
 (when window-system (add-to-list 'default-frame-alist '(height . 100))
     (add-to-list 'default-frame-alist '(width . 120)))
 (setq ring-bell-function 'ignore)
