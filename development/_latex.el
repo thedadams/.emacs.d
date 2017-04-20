@@ -18,13 +18,16 @@
       TeX-show-compilation nil
       LaTeX-item-indent -2
       LaTeX-indent-level 4)
+
 (add-hook 'LaTeX-mode-hook 'flyspell-mode)
 (add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
 
 (add-hook 'LaTeX-mode-hook
           (lambda ()
-            (local-set-key (kbd "C-c c") 'TeX-clean)))
+            (local-set-key (kbd "C-c c") 'TeX-clean))
+          (lambda ()
+            (setq TeX-command-default "LatexMk")))
 
 (provide '_latex)
 
