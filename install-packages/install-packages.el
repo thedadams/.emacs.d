@@ -35,6 +35,7 @@
     osx-clipboard
     py-autopep8
     rainbow-delimiters
+    shell-here
     smart-mode-line
     web-mode
     yaml-mode))

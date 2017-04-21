@@ -20,6 +20,7 @@
 (require 'install-packages)
 (require 'better-defaults)
 (require 'multiple-cursors)
+(require 'shell-here)
 
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
@@ -86,6 +87,8 @@
        (lambda () (interactive)
          (let ((fn (dired-get-file-for-visit)))
            (start-process "default-app" nil "open" fn))))))
+
+(global-set-key (kbd "C-c C-o") 'shell-here)
 
 (require 'development)
 
