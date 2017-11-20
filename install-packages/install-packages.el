@@ -12,7 +12,8 @@
 (require 'package)
 
 (defvar my-packages
-  '(ample-theme
+  '(all-the-icons
+    ample-theme
     auctex
     auctex-latexmk
     better-defaults
@@ -32,6 +33,7 @@
     markdown-mode
     markdown-preview-mode
     multiple-cursors
+    neotree
     osx-clipboard
     py-autopep8
     rainbow-delimiters
