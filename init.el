@@ -21,12 +21,15 @@
 (require 'better-defaults)
 (require 'multiple-cursors)
 (require 'shell-here)
+(require 'neotree)
 
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 (global-set-key (kbd "s-<mouse-1>") 'mc/add-cursor-on-click)
+(global-set-key (kbd "C-c C-o") 'shell-here)
+(global-set-key [f8] 'neotree-toggle)
 
 (setq inhibit-startup-message t
       linum-format "%4d \u2502 "
@@ -37,7 +40,8 @@
       custom-file "~/.emacs.d/custom.el"
       magit-auto-revert-mode 0
       magit-display-buffer-function 'magit-display-buffer-fullframe-status-v1
-      default-major-mode 'text-mode)
+      default-major-mode 'text-mode
+      neo-theme (if (display-graphic-p) 'icons 'arrow))
 
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
@@ -87,8 +91,6 @@
        (lambda () (interactive)
          (let ((fn (dired-get-file-for-visit)))
            (start-process "default-app" nil "open" fn))))))
-
-(global-set-key (kbd "C-c C-o") 'shell-here)
 
 (require 'development)
 

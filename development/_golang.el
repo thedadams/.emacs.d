@@ -10,6 +10,7 @@
 (require 'go-mode)
 
 (exec-path-from-shell-copy-env "GOPATH")
+(setenv "GOROOT" "/usr/local/opt/go/libexec")
 
 (require 'auto-complete)
 (require 'go-autocomplete)

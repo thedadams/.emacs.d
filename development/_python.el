@@ -10,10 +10,8 @@
 
 (elpy-enable)
 
-(setq python-shell-interpreter "python3"
+(setq python-shell-interpreter "python"
       python-shell-completion-native nil)
-
-(add-to-list 'python-shell-completion-native-disabled-interpreters "python3")
 
 (when (require 'flycheck nil t)
   (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
@@ -28,6 +26,9 @@
 (require 'py-autopep8)
 (setq py-autopep8-options '("--ignore=E501,W293,W391,W690"))
 (add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
+
+(setenv "WORKON_HOME" "/anaconda/envs")
+(pyvenv-mode 1)
 
 (provide '_python)
 
