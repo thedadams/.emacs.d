@@ -44,11 +44,13 @@
       neo-theme (if (display-graphic-p) 'icons 'arrow))
 
 (add-hook 'text-mode-hook 'flyspell-mode)
+(add-hook 'text-mode-hook 'adaptive-wrap-prefix-mode)
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
 
 (osx-clipboard-mode +1)
 (global-linum-mode t)
 (menu-bar-mode 1)
+(delete-selection-mode 1)
 
 (load-theme 'ample t)
 (windmove-default-keybindings)
@@ -58,8 +60,6 @@
 (when window-system (add-to-list 'default-frame-alist '(height . 100))
     (add-to-list 'default-frame-alist '(width . 120)))
 (setq ring-bell-function 'ignore)
-(delete-selection-mode 1)
-(adaptive-wrap-prefix-mode 1)
 
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
