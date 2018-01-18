@@ -12,7 +12,7 @@
 
 ;;; Code:
 
-(package-initialize)
+(package-initialize t)
 
 (let ((default-directory "~/.emacs.d/"))
   (normal-top-level-add-subdirs-to-load-path))
@@ -58,6 +58,8 @@
 (when window-system (add-to-list 'default-frame-alist '(height . 100))
     (add-to-list 'default-frame-alist '(width . 120)))
 (setq ring-bell-function 'ignore)
+(delete-selection-mode 1)
+(adaptive-wrap-prefix-mode 1)
 
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))

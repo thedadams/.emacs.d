@@ -12,7 +12,8 @@
 (require 'package)
 
 (defvar my-packages
-  '(all-the-icons
+  '(adaptive-wrap
+    all-the-icons
     ample-theme
     auctex
     auctex-latexmk
