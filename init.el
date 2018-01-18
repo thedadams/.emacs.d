@@ -56,7 +56,7 @@
 (windmove-default-keybindings)
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-(set-frame-font "Go Mono-11")
+(set-frame-font "Go Mono-11" nil t)
 (when window-system (add-to-list 'default-frame-alist '(height . 100))
     (add-to-list 'default-frame-alist '(width . 120)))
 (setq ring-bell-function 'ignore)
