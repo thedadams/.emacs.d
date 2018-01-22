@@ -22,6 +22,8 @@
 (require 'multiple-cursors)
 (require 'shell-here)
 (require 'neotree)
+(setq org-journal-dir "~/Dropbox/Documents/OrgFiles/Personal/Journal/")
+(require 'org-journal)
 
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
@@ -30,6 +32,10 @@
 (global-set-key (kbd "s-<mouse-1>") 'mc/add-cursor-on-click)
 (global-set-key (kbd "C-c C-o") 'shell-here)
 (global-set-key [f8] 'neotree-toggle)
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cc" 'org-capture)
+(global-set-key "\C-cb" 'org-iswitchb)
 
 (setq inhibit-startup-message t
       linum-format "%4d \u2502 "
@@ -41,7 +47,13 @@
       magit-auto-revert-mode 0
       magit-display-buffer-function 'magit-display-buffer-fullframe-status-v1
       default-major-mode 'text-mode
-      neo-theme (if (display-graphic-p) 'icons 'arrow))
+      neo-theme (if (display-graphic-p) 'icons 'arrow)
+      org-directory "~/Dropbox/Documents/OrgFiles/"
+      org-jounral-dir (concat org-directory "Personal/Journal/")
+      org-agenda-files (list "~/Dropbox/Documents/OrgFiles"
+                               org-journal-dir)
+      org-agenda-file-regexp "\\`[^.].*\\.org'\\|[0-9]+$"
+      org-default-notes-file (concat org-directory "Notes.org"))
 
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'text-mode-hook 'adaptive-wrap-prefix-mode)
