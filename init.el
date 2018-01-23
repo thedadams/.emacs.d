@@ -25,6 +25,19 @@
 (setq org-journal-dir "~/Dropbox/Documents/OrgFiles/Personal/Journal/")
 (require 'org-journal)
 
+;; Windows versus Mac specific stuff
+;; Specifically, work versus home computers.
+
+(when (eq system-type 'windows-nt)
+  (add-to-list 'exec-path "C:/ProgramData/dadams/hunspell/bin/")
+  (setq ispell-program-name "C:/ProgramData/dadams/hunspell/bin/hunspell"
+        ispell-dictionary "en_US"))
+
+(when (eq system-type 'darwin)
+  (osx-clipboard-mode +1)
+  (set-frame-font "Go Mono-11" nil t)
+  (setq neo-theme (if (display-graphic-p) 'icons 'arrow)))
+
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
@@ -47,7 +60,6 @@
       magit-auto-revert-mode 0
       magit-display-buffer-function 'magit-display-buffer-fullframe-status-v1
       default-major-mode 'text-mode
-      neo-theme (if (display-graphic-p) 'icons 'arrow)
       org-directory "~/Dropbox/Documents/OrgFiles/"
       org-jounral-dir (concat org-directory "Personal/Journal/")
       org-agenda-files (list "~/Dropbox/Documents/OrgFiles"
@@ -59,7 +71,6 @@
 (add-hook 'text-mode-hook 'adaptive-wrap-prefix-mode)
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
 
-(osx-clipboard-mode +1)
 (global-linum-mode t)
 (menu-bar-mode 1)
 (delete-selection-mode 1)
@@ -68,7 +79,6 @@
 (windmove-default-keybindings)
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-(set-frame-font "Go Mono-11" nil t)
 (when window-system (add-to-list 'default-frame-alist '(height . 100))
     (add-to-list 'default-frame-alist '(width . 120)))
 (setq ring-bell-function 'ignore)

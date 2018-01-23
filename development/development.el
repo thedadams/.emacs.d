@@ -1,4 +1,4 @@
-;;; development.el --- Load All Development Configuration
+
 
 ;; Author: Kyle W. Purdon (kpurdon)
 ;;
@@ -17,7 +17,7 @@
 (add-hook 'prog-mode-hook 'subword-mode)
 
 (require '_python)
-(require '_golang)
+;;(require '_golang)
 (require '_markdown)
 (require '_latex)
 (require '_javascript)

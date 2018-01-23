@@ -35,6 +35,7 @@
     markdown-preview-mode
     multiple-cursors
     neotree
+    org-journal
     osx-clipboard
     py-autopep8
     rainbow-delimiters
@@ -43,8 +44,13 @@
     web-mode
     yaml-mode))
 
-(add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/"))
+(when (eq system-type 'windows-nt)
+  (add-to-list 'package-archives
+               '("melpa" . "http://melpa.org/packages/") t))
+
+(when (eq system-type 'darwin)
+  (add-to-list 'package-archives
+               '("melpa" . "https://melpa.org/packages/") t))
 
 (when (not package-archive-contents)
     (package-refresh-contents))
