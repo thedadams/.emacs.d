@@ -15,14 +15,12 @@
   '(adaptive-wrap
     all-the-icons
     ample-theme
-    auctex
     auctex-latexmk
+    auctex-lua
     better-defaults
     elpy
     exec-path-from-shell
     flycheck
-    flatland-black-theme
-    flatland-theme
     go-add-tags
     go-autocomplete
     go-eldoc
