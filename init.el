@@ -22,8 +22,6 @@
 (require 'multiple-cursors)
 (require 'shell-here)
 (require 'neotree)
-(setq org-journal-dir "~/Dropbox/Documents/OrgFiles/Personal/Journal/")
-(require 'org-journal)
 
 ;; Windows versus Mac specific stuff
 ;; Specifically, work versus home computers.
@@ -61,13 +59,7 @@
       custom-file "~/.emacs.d/custom.el"
       magit-auto-revert-mode 0
       magit-display-buffer-function 'magit-display-buffer-fullframe-status-v1
-      default-major-mode 'text-mode
-      org-directory "~/Dropbox/Documents/OrgFiles/"
-      org-jounral-dir (concat org-directory "Personal/Journal/")
-      org-agenda-files (list "~/Dropbox/Documents/OrgFiles"
-                               org-journal-dir)
-      org-agenda-file-regexp "\\`[^.].*\\.org'\\|[0-9]+$"
-      org-default-notes-file (concat org-directory "Notes.org"))
+      default-major-mode 'text-mode)
 
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'text-mode-hook 'adaptive-wrap-prefix-mode)
