@@ -17,13 +17,14 @@
 (add-hook 'prog-mode-hook 'subword-mode)
 
 (require '_python)
-(require '_golang)
 (require '_markdown)
 (require '_latex)
 (require '_javascript)
 (require '_web)
 (require '_json)
 (require '_org)
+(when (eq system-type 'darwin)
+  (require '_golang))
 
 (provide 'development)
 
