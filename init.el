@@ -74,7 +74,7 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 (when window-system (add-to-list 'default-frame-alist '(height . 100))
-    (add-to-list 'default-frame-alist '(width . 120)))
+    (add-to-list 'default-frame-alist '(width . 160)))
 (setq ring-bell-function 'ignore)
 
 (when (memq window-system '(mac ns))
