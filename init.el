@@ -60,7 +60,8 @@
       custom-file "~/.emacs.d/custom.el"
       magit-auto-revert-mode 0
       magit-display-buffer-function 'magit-display-buffer-fullframe-status-v1
-      default-major-mode 'text-mode)
+      default-major-mode 'text-mode
+      uncrustify-config-path "~/.uncrustify/uncrustify.cfg")
 
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'text-mode-hook 'adaptive-wrap-prefix-mode)
