@@ -39,6 +39,7 @@
     rainbow-delimiters
     shell-here
     smart-mode-line
+    uncrustify-mode
     web-mode
     yaml-mode))
 

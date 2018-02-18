@@ -22,6 +22,7 @@
 (require 'multiple-cursors)
 (require 'shell-here)
 (require 'neotree)
+(require 'uncrusfify-mode)
 
 ;; Windows versus Mac specific stuff
 ;; Specifically, work versus home computers.
@@ -64,6 +65,10 @@
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'text-mode-hook 'adaptive-wrap-prefix-mode)
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
+
+(add-hook 'c-mode-common-hook
+          '(lambda ()
+             (uncrustify-mode 1)))
 
 (global-linum-mode t)
 (menu-bar-mode 1)
