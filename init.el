@@ -22,7 +22,7 @@
 (require 'multiple-cursors)
 (require 'shell-here)
 (require 'neotree)
-(require 'uncrusfify-mode)
+(require 'uncrustify-mode)
 
 ;; Windows versus Mac specific stuff
 ;; Specifically, work versus home computers.
