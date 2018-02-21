@@ -25,8 +25,8 @@
 (add-hook 'LaTeX-mode-hook
           (lambda ()
             (add-to-list 'TeX-command-list '("LatexMk-mine" "latexmk %(-PDF)%S%(mode) --shell-escape %(file-line-error) %(extraopts) %t" TeX-run-latexmk nil (plain-tex-mode latex-mode doctex-mode) :help "Run LatexMk my version"))
-            (local-set-key (kbd "C-c c") 'TeX-clean))
-            (setq TeX-command-default "LatexMk-mine"))
+            (local-set-key (kbd "C-c c") 'TeX-clean)
+            (setq TeX-command-default "LatexMk-mine")))
 
 (provide '_latex)
 
