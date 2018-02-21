@@ -37,7 +37,8 @@
 (when (eq system-type 'darwin)
   (osx-clipboard-mode +1)
   (set-frame-font "Go Mono-11" nil t)
-  (setq neo-theme (if (display-graphic-p) 'icons 'arrow)))
+  (setq neo-theme (if (display-graphic-p) 'icons 'arrow)
+        uncrustify-bin "C:/ProgramData/dadams/uncrustify/uncrustify.exe"))
 
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
@@ -61,7 +62,7 @@
       magit-auto-revert-mode 0
       magit-display-buffer-function 'magit-display-buffer-fullframe-status-v1
       default-major-mode 'text-mode
-      uncrustify-config-path "~/.uncrustify/uncrustify.cfg")
+      uncrustify-config-path (concat default-directory "uncrustify.cfg"))
 
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'text-mode-hook 'adaptive-wrap-prefix-mode)
