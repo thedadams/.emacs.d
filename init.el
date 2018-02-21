@@ -61,8 +61,7 @@
       custom-file "~/.emacs.d/custom.el"
       magit-auto-revert-mode 0
       magit-display-buffer-function 'magit-display-buffer-fullframe-status-v1
-      default-major-mode 'text-mode
-      uncrustify-config-path (concat default-directory "uncrustify.cfg"))
+      default-major-mode 'text-mode)
 
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'text-mode-hook 'adaptive-wrap-prefix-mode)
@@ -70,7 +69,8 @@
 
 (add-hook 'c-mode-common-hook
           '(lambda ()
-             (uncrustify-mode 1)))
+             (uncrustify-mode 1)
+          (setq uncrustify-config-path (expand-file-name (concat user-emacs-directory "uncrustify.cfg")))))
 
 (global-linum-mode t)
 (menu-bar-mode 1)
