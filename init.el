@@ -32,13 +32,13 @@
   (setq ispell-program-name "C:/ProgramData/dadams/hunspell/bin/hunspell"
         ispell-dictionary "en_US"
         ispell-local-dictionary-alist
-      '(("en_US" "[[:alpha:]]" "[^[:alpha:]]" "[']" nil ("-d" "en_US") nil utf-8))))
+        '(("en_US" "[[:alpha:]]" "[^[:alpha:]]" "[']" nil ("-d" "en_US") nil utf-8))
+        uncrustify-bin "C:/ProgramData/dadams/uncrustify/uncrustify.exe"))
 
 (when (eq system-type 'darwin)
   (osx-clipboard-mode +1)
   (set-frame-font "Go Mono-11" nil t)
-  (setq neo-theme (if (display-graphic-p) 'icons 'arrow)
-        uncrustify-bin "C:/ProgramData/dadams/uncrustify/uncrustify.exe"))
+  (setq neo-theme (if (display-graphic-p) 'icons 'arrow)))
 
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
