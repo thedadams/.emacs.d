@@ -70,7 +70,12 @@
 (add-hook 'c-mode-common-hook
           '(lambda ()
              (uncrustify-mode 1)
-          (setq uncrustify-config-path (expand-file-name (concat user-emacs-directory "uncrustify.cfg")))))
+             (setq uncrustify-config-path (expand-file-name (concat user-emacs-directory "uncrustify.cfg")))))
+
+(add-to-list 'load-path
+              "~/.emacs.d/")
+(require 'yasnippet)
+(yas-global-mode 1)
 
 (global-linum-mode t)
 (menu-bar-mode 1)

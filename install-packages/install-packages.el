@@ -41,7 +41,9 @@
     smart-mode-line
     uncrustify-mode
     web-mode
-    yaml-mode))
+    yaml-mode
+    yasnippet
+    yasnippet-snippets))
 
 (when (eq system-type 'windows-nt)
   (add-to-list 'package-archives
