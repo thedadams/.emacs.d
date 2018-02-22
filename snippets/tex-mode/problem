@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: problem
+# key: prb
+# --
+\fbox{\parbox{0.985\textwidth}{\problem. $0}}
+\vfill

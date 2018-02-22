@@ -73,7 +73,7 @@
              (setq uncrustify-config-path (expand-file-name (concat user-emacs-directory "uncrustify.cfg")))))
 
 (add-to-list 'load-path
-              "~/.emacs.d/")
+              "~/.emacs.d/snippets/")
 (require 'yasnippet)
 (yas-global-mode 1)
 
