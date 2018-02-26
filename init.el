@@ -87,7 +87,6 @@
 (add-hook 'text-mode-hook 'adaptive-wrap-prefix-mode)
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
 (global-linum-mode t)
-(menu-bar-mode 1)
 (delete-selection-mode 1)
 (load-theme 'ample t)
 (windmove-default-keybindings)
