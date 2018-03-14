@@ -33,7 +33,8 @@
         ispell-dictionary "en_US"
         ispell-local-dictionary-alist
         '(("en_US" "[[:alpha:]]" "[^[:alpha:]]" "[']" nil ("-d" "en_US") nil utf-8))
-        uncrustify-bin "C:/ProgramData/dadams/uncrustify/uncrustify.exe"))
+        uncrustify-bin "C:/ProgramData/dadams/uncrustify/uncrustify.exe"
+        inhibit-default-init t))
 ;; Mac specific
 (when (eq system-type 'darwin)
   (osx-clipboard-mode +1)
