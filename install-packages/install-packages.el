@@ -33,6 +33,7 @@
     markdown-preview-mode
     multiple-cursors
     neotree
+    openwith
     org-journal
     osx-clipboard
     py-autopep8

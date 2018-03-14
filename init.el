@@ -101,6 +101,10 @@
 (add-to-list 'sml/replacer-regexp-list
              '("^~/go" ":go:") t)
 
+(require 'openwith)
+(openwith-mode t)
+(setq openwith-associations '(("\\.pdf\\|doc?x\\|xls?x\\'" "open" (file))))
+
 ;; Magit settings
 (require 'magit)
 (global-set-key (kbd "C-c g") 'magit-status)
