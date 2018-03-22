@@ -74,7 +74,7 @@
 ;; Uncrustify mode for appropriate modes
 (add-hook 'c-mode-common-hook
           '(lambda ()
-             (uncrustify-mode 1)
+             (local-set-key (kbd "C-c C-u") 'uncrustify-buffer)
              (setq uncrustify-config-path (expand-file-name (concat user-emacs-directory "uncrustify.cfg")))))
 
 ;; Load snippets
