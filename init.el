@@ -33,8 +33,7 @@
         ispell-dictionary "en_US"
         ispell-local-dictionary-alist
         '(("en_US" "[[:alpha:]]" "[^[:alpha:]]" "[']" nil ("-d" "en_US") nil utf-8))
-        uncrustify-bin "C:/ProgramData/dadams/uncrustify/uncrustify.exe"
-        inhibit-default-init t))
+        uncrustify-bin "C:/ProgramData/dadams/uncrustify/uncrustify.exe"))
 ;; Mac specific
 (when (eq system-type 'darwin)
   (osx-clipboard-mode +1)
@@ -61,6 +60,7 @@
 (global-set-key (kbd "C-c C-o") 'shell-here)
 
 (setq inhibit-startup-message t
+      inhibit-default-init t
       linum-format "%4d \u2502 "
       backup-directory-alist `((".*" . ,temporary-file-directory))
       auto-save-file-name-transforms `((".*" ,temporary-file-directory t))
