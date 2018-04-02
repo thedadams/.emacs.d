@@ -24,7 +24,8 @@
 (require '_json)
 (require '_org)
 (when (eq system-type 'darwin)
-  (require '_golang))
+  (require '_golang)
+  (require '_rust))
 
 (provide 'development)
 

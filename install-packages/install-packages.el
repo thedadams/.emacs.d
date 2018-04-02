@@ -18,9 +18,11 @@
     auctex-latexmk
     auctex-lua
     better-defaults
+    cargo
     elpy
     exec-path-from-shell
     flycheck
+    flycheck-rust
     go-add-tags
     go-autocomplete
     go-eldoc
@@ -37,7 +39,9 @@
     org-journal
     osx-clipboard
     py-autopep8
+    racer
     rainbow-delimiters
+    rust-mode
     shell-here
     smart-mode-line
     uncrustify-mode
