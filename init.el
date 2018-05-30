@@ -23,6 +23,7 @@
 (require 'shell-here)
 (require 'neotree)
 (require 'uncrustify-mode)
+(require 'doom-themes)
 
 ;; Windows versus Mac specific stuff
 ;; Specifically, work versus home computers.
@@ -89,7 +90,11 @@
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
 (global-linum-mode t)
 (delete-selection-mode 1)
-(load-theme 'ample t)
+;; Theme settings
+(load-theme 'doom-one t)
+(doom-themes-neotree-config)
+(doom-themes-org-config)
+
 (windmove-default-keybindings)
 (defalias 'yes-or-no-p 'y-or-n-p)
 (when window-system (add-to-list 'default-frame-alist '(height . 100))
